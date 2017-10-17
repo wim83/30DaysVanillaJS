@@ -1,9 +1,11 @@
 window.addEventListener('keydown',
 function(e){console.log(e);
 var number = e.keyCode;
-var audio = document.getElementsByTagName('audio[data-key="'+number+'"]')[0];
+//var audio = document.getElementsByTagName('audio[data-key="'+number+'"]');    DOESN'T WORK!
+var audio = document.querySelector('audio[data-key="'+number+'"]');          // WORKS
 console.log(audio);
-var audio = new Audio('audio[data-key="'+number+'"]');
+//var audio = new Audio('audio[data-key="'+number+'"]');
+audio.currentTime=0;
 audio.play();
             //var audio = ('audio[data-key="'+number+'"]');
 //audio.play();
