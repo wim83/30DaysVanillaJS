@@ -11,11 +11,9 @@ window.addEventListener('keydown',
         AUDIO.play();
         console.log(KEY) // testing & visualizing options
         KEY.classList.add('playing');
-        //var audio = ('audio[data-key="'+number+'"]');
-        //audio.play();
-        //console.log(audio);
-        /* <audio data-key="72" src="sounds/ride.wav"></audio> */
 
+        const KEYS = document.querySelectorAll('.key');
+        keys.forEach(key => key.addEventListener('transistionend'), removeTransition);
     });
 
 // document.getElementsByTagName('body').addEventListener('click',function(e){console.log(e);})
